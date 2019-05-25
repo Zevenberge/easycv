@@ -1,0 +1,15 @@
+{
+	"name": "easycv",
+	"authors": [
+		"Marco de Wild"
+	],
+	"description": "Generate a static HTML page based on curriculum vitae data.",
+	"copyright": "Copyright © 2019, Marco de Wild",
+	"license": "mit",
+	"dependencies": {
+        "darg": "~>0.1.0",
+		"diet-ng": "~>1.5.0",
+		"optional": "~>0.12.0",
+		"vibe-d:data": "~>0.8.6-alpha.2"
+	}
+}

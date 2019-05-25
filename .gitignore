@@ -1,0 +1,14 @@
+.dub
+docs.json
+__dummy.html
+docs/
+easycv.so
+easycv.dylib
+easycv.dll
+easycv.a
+easycv.lib
+easycv-test-*
+*.exe
+*.o
+*.obj
+*.lst

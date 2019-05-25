@@ -1,0 +1,12 @@
+{
+	"fileVersion": 1,
+	"versions": {
+		"bolts": "0.11.1",
+		"darg": "0.1.0",
+		"diet-ng": "1.5.0",
+		"optional": "0.12.0",
+		"silly": "0.8.2",
+		"stdx-allocator": "2.77.5",
+		"vibe-d": "0.8.6-alpha.2"
+	}
+}
