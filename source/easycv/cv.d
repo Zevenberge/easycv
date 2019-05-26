@@ -17,7 +17,7 @@ class Cv
     Experience[] experience;
     /// Optionally: A list of voluntary duties that you want
     /// to share with the world.
-    Nullable!(Experience[]) voluntary;
+    @optional Nullable!(Experience[]) voluntary;
     /// What educations have been followed.
     Education[] education;
     /// A non-exhaustive list of possibly relevant skills.
@@ -48,7 +48,7 @@ class About
     /// Optionally: Other information that you might find
     /// interesting to tell, e.g. a link to
     /// your portfolio.
-    Nullable!Json misc;
+    @optional Nullable!Json misc;
 }
 
 /// Describes a previous working experience relevant
@@ -59,14 +59,14 @@ class Experience
     When from;
     /// Optionally: When the job ended. If the job continues until the
     /// present, leave it blank.
-    Nullable!When to;
+    @optional Nullable!When to;
     /// Where the experience took place. E.g. your employer,
     /// your sports club or your university.
     string organisation;
     /// Optionally: Describes the context the experience was in. E.g.
     /// 'internship' or 'master thesis'. Leave blank if
     /// the context is not applicable.
-    Nullable!string context;
+    @optional Nullable!string context;
     /// Short decription on what the experience entailed. E.g.
     /// 'Simulating thermal flow in fluids at small length scales
     /// using Fortran'.
@@ -74,7 +74,7 @@ class Experience
     /// Optionally: Lists meaningful parts of this experience that are worth
     /// mentioning, but not big enough to become a top-level
     /// experience on their own
-    Nullable!(Task[]) tasks;
+    @optional Nullable!(Task[]) tasks;
 }
 
 /// Describes a meaningful part of an experience, worth mentioning
@@ -85,7 +85,7 @@ class Task
     When from;
     /// Optionally: When the job ended. If the job continues until the
     /// present, leave it blank.
-    Nullable!When to;
+    @optional Nullable!When to;
     /// Short decription on what the experience entailed. E.g.
     /// 'Simulating thermal flow in fluids at small length scales
     /// using Fortran'.
@@ -100,7 +100,7 @@ class Education
     /// Optionally: When the education was finished. 
     /// If the education continues until the
     /// present, leave it blank.
-    Nullable!When to;
+    @optional Nullable!When to;
     /// The organisation you were enrolled in.
     string organisation;
     /// Name of the education and rank. E.g.
@@ -136,7 +136,7 @@ class Language
 struct When
 {
     /// Optionally: The month the event occured.
-    Nullable!Month month;
+    @optional @byName Nullable!Month month;
     /// The year the event occured.
     int year;
 }

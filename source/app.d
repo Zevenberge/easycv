@@ -1,6 +1,20 @@
 import std.stdio;
+import optional.optional;
+import easycv.html;
+import easycv.io;
+import easycv.opts;
 
-void main()
+int main(string[] args)
 {
-	writeln("Edit source/app.d to start your project.");
+	auto options = parseCommandLine(args);
+	if(options == none) return 0;
+	writeln("Loading json from file.");
+	auto cv = loadFromFile(options.unwrap.filename);
+	if(cv == none) return 1;
+	writeln("Converting the CV to html.");
+	string html = convertToHtml(cv.unwrap);
+	writeln("Writing the html to file.");
+	html.writeToFile(options.unwrap.output);
+	writeln("Done.");
+	return 0;
 }

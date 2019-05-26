@@ -1,0 +1,93 @@
+{
+    "about": {
+        "name": "Joe Bloggs",
+        "address": "42 Main Street\n258348 Anytown",
+        "phone": "3208578573",
+        "email": "j.bloggs@localhost.com",
+        "dateOfBirth": "1991-08-15",
+        "nationality": "British"
+    },
+    "experience": [
+        {
+            "from": {
+                "month": "June",
+                "year": 2008
+            },
+            "organisation": "Lorem ipsum",
+            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt"
+        },
+        {
+            "from": {
+                "month": "February",
+                "year": 2004
+            },
+            "to": {
+                "month": "November",
+                "year": 2006
+            },
+            "organisation": "At vero eos",
+            "description": "At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        }
+    ],
+    "education": [
+        {
+            "from": {
+                "year": 2010
+            },
+            "organisation": "LID University of Applied Sciences",
+            "description": "MSc. Lorem Ipsum"
+        },
+        {
+            "from": {
+                "year": 2007
+            },
+            "to": {
+                "year": 2010
+            },
+            "organisation": "Dolor sit high school",
+            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam, 97%"
+        },
+        {
+            "from": {
+                "year": 2005
+            },
+            "to": {
+                "year": 2007
+            },
+            "organisation": "Hec prodere",
+            "description": "Hec prodere movens adipiscur esse"
+        }
+    ],
+    "skills": [
+        {
+            "category": "Software",
+            "skills": [
+                "LibreOffice",
+                "LaTeX",
+                "Git"
+            ]
+        },
+        {
+            "category": "Programming",
+            "skills": [
+                "C",
+                "C++"
+            ]
+        }
+    ],
+    "languages": [
+        {
+            "language": "English",
+            "proficiency": "Mother tongue"
+        },
+        {
+            "language": "French",
+            "proficiency": "Fluent (DELF 2010)"
+        },
+        {
+            "language": "Japanese",
+            "proficiency": "Fair"
+        }
+
+    ]
+}

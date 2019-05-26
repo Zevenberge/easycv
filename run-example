@@ -1,0 +1,3 @@
+#!/bin/bash
+
+dub run -- cv-example.json -o bin/cv.html
