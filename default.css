@@ -1,0 +1,57 @@
+.about div {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  min-width: 800px;
+}
+
+.about label {
+  font-weight: bolder;
+  width: 30%;
+}
+
+.about div ~div label {
+  border-top: grey;
+  border-top-width: thin;
+  border-top-style: groove;
+}
+
+.about input {
+  background: none;
+  width: 30%;
+  margin-right: 30%;
+  color: black;
+}
+
+.about input ~ input {
+  margin-left: 30%;
+}
+
+.experiences ul {
+  list-style-type: none;
+}
+
+.period {
+  display: flex;
+}
+
+.period:before {
+  content: "(";
+}
+
+.to {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.to:after {
+  content: "-";
+}
+
+.period:after {
+  content: ")";
+}
+
+.experiences {
+  
+}
