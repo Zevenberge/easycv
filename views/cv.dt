@@ -26,12 +26,14 @@
             p #{line}
     -if(!exp.tasks.isNull)
         .tasks
-            -foreach(task; exp.tasks.get)
-                .task
-                    -period(task.from, task.to);
-                    .description
-                        -foreach(line; task.description.splitter('\n'))
-                            p #{line}
+            //- For consistency with other lists.
+            ul
+                -foreach(task; exp.tasks.get)
+                    li
+                        -period(task.from, task.to);
+                        .description
+                            -foreach(line; task.description.splitter('\n'))
+                                p #{line}
 
 doctype html
 html
@@ -45,26 +47,27 @@ html
                 h2 Personalia
                 .name
                     label Name
-                    input(type="text", disabled, value="#{cv.about.name}")
+                    input(type="text", readonly, value="#{cv.about.name}")
                 .address
                     label Address
                     -foreach(line; cv.about.address.splitter('\n'))
-                        input(type="text", disabled, value="#{line}")
+                        input(type="text", readonly, value="#{line}")
                 .phone
                     label Phone
-                    input(type="text", disabled, value="#{cv.about.phone}")
+                    input(type="text", readonly, value="#{cv.about.phone}")
                 .email
                     label Email
-                    input(type="text", disabled, value="#{cv.about.email}")
+                    input(type="text", readonly, value="#{cv.about.email}")
                 .dateOfBirth
                     label Date of birth
-                    input(type="date", disabled, value="#{cv.about.dateOfBirth.toISOString}")
+                    input(type="date", readonly, value="#{cv.about.dateOfBirth.toISOExtString}")
                 //- TODO: Misc
             .experiences
                 h2 Experience
-                -foreach(exp; cv.experience)
-                    .experience
-                        -experience(exp);
+                ul
+                    -foreach(exp; cv.experience)
+                        li
+                            -experience(exp);
             -if(!cv.voluntary.isNull)
                 .voluntary
                     h2 Voluntary
@@ -73,14 +76,15 @@ html
                         -experience(exp);
             .education
                 h2 Education
-                -foreach(edu; cv.education)
-                    div
-                        -period(edu.from, edu.to);
-                        .organisation
-                            h3 #{edu.organisation}
-                        .description
-                            -foreach(line; edu.description.splitter('\n'))
-                                p #{line}
+                ul
+                    -foreach(edu; cv.education)
+                        li
+                            -period(edu.from, edu.to);
+                            .organisation
+                                h3 #{edu.organisation}
+                            .description
+                                -foreach(line; edu.description.splitter('\n'))
+                                    p #{line}
             .skills
                 h2 Skills
                 -foreach(sk; cv.skills)
