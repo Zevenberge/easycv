@@ -1,3 +1,28 @@
+/*! Generic headers */
+
+div {
+  max-width: 1100px;
+}
+
+h1 {
+  font-size: 150%;
+  font-weight: bold;
+  color: darkslateblue;
+}
+
+h2 {
+  font-size: 130%;
+  font-weight: bolder;
+  color: darkslateblue;
+  /*! display: inline; */
+}
+
+h3 {
+  font-size: 100%;
+}
+
+/*! About me */
+
 .about div {
   display: flex;
   flex-wrap: wrap;
@@ -27,31 +52,170 @@
   margin-left: 30%;
 }
 
+/*! Experiences */
+
+.experiences h3 {
+  display: inline;
+}
+
 .experiences ul {
   list-style-type: none;
+  display: contents;
 }
+
+.experiences li {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.experiences .description {
+  width: 90%;
+}
+
+.experiences li ~ li {
+  border-top: lightgray;
+  border-top-width: thin;
+  border-top-style: groove;
+}
+
+.tasks {
+  font-size: 90%;
+}
+
+.tasks p {
+  margin-top: 0;
+  /*! display: contents, flex; */
+  flex-wrap: wrap;
+}
+
+.tasks li {
+  display: flex;
+  flex-wrap: unset;
+}
+
+.tasks li ~ li {
+  border-top-style: none;
+}
+
+.tasks .period {
+  display: flex;
+  width: 60%;
+  margin-right: 5%;
+  justify-content: space-between;
+}
+
+
+/*! Voluntary */
+
+.voluntary h3 {
+  display: inline;
+}
+
+.voluntary ul {
+  list-style-type: none;
+  display: contents;
+}
+
+.voluntary li {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.voluntary .description {
+  width: 90%;
+}
+
+.voluntary li ~ li {
+  border-top: lightgray;
+  border-top-width: thin;
+  border-top-style: groove;
+}
+
+/*! Education */
+
+.education h3 {
+  display: inline;
+}
+
+.education ul {
+  list-style-type: none;
+  display: contents;
+}
+
+.education li {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.education .description {
+  width: 90%;
+}
+
+.education li ~ li {
+  border-top: lightgray;
+  border-top-width: thin;
+  border-top-style: groove;
+}
+
+/*! Time display */
 
 .period {
   display: flex;
+  width: 30%;
+  margin-right: 5%;
+  justify-content: space-between;
 }
 
-.period:before {
-  content: "(";
+.period > div {
+  width: 45%;
 }
 
-.to {
-  margin-left: 3px;
-  margin-right: 3px;
+.period > .to {
+  width: auto;
 }
 
 .to:after {
   content: "-";
 }
 
-.period:after {
-  content: ")";
+/*! Skills */
+
+.skill {
+  display : flex;
 }
 
-.experiences {
-  
+.skill label {
+  font-weight: bold;
+  width: 20%;
+}
+
+.skill ul {
+  display: contents, flex;
+  flex-wrap: wrap;
+  margin-top: 0;
+  max-width: 75%;
+}
+
+.skill li {
+  display: inline;
+}
+
+.skill li:after {
+  content: ", ";
+  margin-right: 3px;
+}
+
+.skill li:last-child:after {
+    content: "";
+}
+
+/*! Languages */
+
+.language {
+  display: flex;
+}
+
+.languages label {
+  font-weight: bold;
+  width: 20%;
 }

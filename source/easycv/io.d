@@ -14,8 +14,7 @@ Optional!Cv loadFromFile(string filename)
     string contents;
     try
     {
-        auto file = File(filename, "r");
-        contents = file.byLineCopy(Yes.keepTerminator).inOneString;
+        contents = readAllText(filename);
     }
     catch(StdioException e)
     {
@@ -58,4 +57,23 @@ void writeToFile(string contents, string filename)
 {
     auto f = File(filename, "w");
     f.write(contents);
+}
+
+private string readAllText(string filename)
+{
+    auto file = File(filename, "r");
+    return file.byLineCopy(Yes.keepTerminator).inOneString;
+}
+
+string loadCss()
+{
+    try
+    {
+        return readAllText("default.css");
+    }
+    catch(StdioException e)
+    {
+        writeln(e.msg);
+        return "";
+    }
 }

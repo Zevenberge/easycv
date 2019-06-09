@@ -4,23 +4,19 @@ import std.conv;
 import diet.html;
 import easycv.cv;
 
-string convertToHtml(Cv cv)
+string convertToHtml(Cv cv, string style)
 {
     auto output = new Output;
-    compileHTMLDietFile!("cv.dt", cv)(output);
+    auto css = style;
+    compileHTMLDietFile!("cv.dt", cv, css)(output);
     return output.buffer;
 }
 
 private class Output
 {
     string buffer;
-    void put(string s)
+    void put(S)(S s)
     {
-        buffer ~= s;
-    }
-
-    void put(dchar c)
-    {
-        buffer ~= c.to!string;
+        buffer ~= s.to!string;
     }
 }
