@@ -65,11 +65,11 @@ private string readAllText(string filename)
     return file.byLineCopy(Yes.keepTerminator).inOneString;
 }
 
-string loadCss()
+string loadCss(string stylesheet)
 {
     try
     {
-        return readAllText("default.css");
+        return readAllText(stylesheet);
     }
     catch(StdioException e)
     {

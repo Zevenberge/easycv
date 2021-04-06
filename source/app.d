@@ -12,7 +12,7 @@ int main(string[] args)
 	auto cv = loadFromFile(options.unwrap.filename);
 	if(cv == none) return 1;
 	writeln("Converting the CV to html.");
-	string style = loadCss;
+	string style = loadCss(options.unwrap.style);
 	string html = convertToHtml(cv.unwrap, style);
 	writeln("Writing the html to file.");
 	html.writeToFile(options.unwrap.output);

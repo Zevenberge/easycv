@@ -61,6 +61,20 @@ unittest
     assert(result.unwrap.output == "resume.html");
 }
 
+@("The default stylesheet is default.css")
+unittest
+{
+    auto result = parseCommandLine(["easycv", "my-fabulous-cv.json"]);
+    assert(result.unwrap.style == "default.css");
+}
+
+@("I can override the stylesheet if required")
+unittest
+{
+    auto result = parseCommandLine(["easycv", "my-fabulous-cv.json", "-s", "fabulous.css"]);
+    assert(result.unwrap.style == "fabulous.css");
+}
+
 struct Options
 {
     @Option("help", "h")
@@ -74,6 +88,10 @@ struct Options
     @Option("output-file", "o")
     @Help("Name of the file to write the resulting HTML to. It defaults to 'cv.html'.")
     string output = "cv.html";
+
+    @Option("style", "s")
+    @Help("Name of the preferred stylesheet. It defaults to 'default.css'.")
+    string style = "default.css";
 }
 
 private immutable usage = usageString!Options("easycv");
