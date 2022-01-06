@@ -9,8 +9,8 @@
 	"targetPath": "bin/",
 	"dependencies": {
         "darg": "~>0.1.0",
-		"diet-ng": "~>1.5.0",
+		"diet-ng": "~>1.8.0",
 		"optional": "~>0.12.0",
-		"vibe-d:data": "~>0.8.6-alpha.2"
+		"vibe-d:data": "~>0.9.4"
 	}
 }

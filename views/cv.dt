@@ -40,7 +40,7 @@
     .voluntary
         h2 Voluntary
         ul
-            -foreach(exp; cv.voluntary)
+            -foreach(exp; cv.voluntary.get)
                 li
                     -experience(exp);
 
